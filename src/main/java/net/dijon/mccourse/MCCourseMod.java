@@ -2,6 +2,7 @@ package net.dijon.mccourse;
 
 import com.mojang.logging.LogUtils;
 import net.dijon.mccourse.block.ModBlocks;
+import net.dijon.mccourse.item.ModCreativeModeTabs;
 import net.dijon.mccourse.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -27,6 +28,8 @@ public class MCCourseMod {
     private static final Logger LOGGER = LogUtils.getLogger();
     public MCCourseMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
@@ -58,6 +61,9 @@ public class MCCourseMod {
             event.accept(ModBlocks.AlEXANDRITE_BLOCK);
             event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
             event.accept(ModBlocks.ALEXANDRITE_ORE);
+            event.accept(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE);
+            event.accept(ModBlocks.NETHER_ALEXANDRITE_ORE);
+            event.accept(ModBlocks.END_STONE_ALEXANDRITE_ORE);
         }
     }
 
