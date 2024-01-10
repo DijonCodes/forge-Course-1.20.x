@@ -2,6 +2,7 @@ package net.dijon.mccourse.item;
 
 import net.dijon.mccourse.MCCourseMod;
 import net.dijon.mccourse.block.ModBlocks;
+import net.dijon.mccourse.item.custom.MetalDectectorItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -27,6 +28,7 @@ public class ModCreativeModeTabs {
                 output.accept(ModBlocks.NETHER_ALEXANDRITE_ORE.get());
                 output.accept(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get());
                 output.accept(ModBlocks.END_STONE_ALEXANDRITE_ORE.get());
+                output.accept(ModItems.METAL_DETECTOR.get());
             } ).build());
 
     public static void register(IEventBus eventBus){
