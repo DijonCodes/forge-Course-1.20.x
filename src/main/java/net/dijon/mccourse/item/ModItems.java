@@ -1,6 +1,7 @@
 package net.dijon.mccourse.item;
 
 import net.dijon.mccourse.MCCourseMod;
+import net.dijon.mccourse.item.custom.BlockDetectorItem;
 import net.dijon.mccourse.item.custom.MetalDectectorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +18,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> RAW_ALEXANDRITE = ITEMS.register("raw_alexandrite",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BlOCK_DETECTOR = ITEMS.register("block_detector",
+            () -> new BlockDetectorItem(new Item.Properties().durability(512)));
 
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             () -> new MetalDectectorItem(new Item.Properties().durability(512)));
